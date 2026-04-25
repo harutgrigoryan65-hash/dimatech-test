@@ -1,0 +1,11 @@
+.DS_Store
+.env
+Тестовое задание. Backend, Python.txt
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
