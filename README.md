@@ -2,6 +2,14 @@
 
 Асинхронный REST API на Sanic + SQLAlchemy async + PostgreSQL.
 
+## Требования
+
+```text
+Python 3.12
+PostgreSQL 16+
+Docker Compose
+```
+
 ## Запуск через Docker Compose
 
 ```bash
