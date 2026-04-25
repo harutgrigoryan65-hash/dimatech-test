@@ -44,6 +44,10 @@ docker compose up --build
 
 Приложение будет доступно на `http://localhost:3993`. Миграции выполняются автоматически при старте контейнера приложения.
 
+Web UI для ручной проверки доступен на `http://localhost:3993/`.
+
+REST API остаётся основной частью задания; UI добавлен как демо-панель для логина, просмотра счетов/платежей, списка пользователей и отправки webhook.
+
 ## Запуск без Docker
 
 1. Создайте PostgreSQL базу `test_pythonmid`.
@@ -100,6 +104,7 @@ password: admin12345
 ## Основные endpoints
 
 ```text
+GET  /
 POST /api/users/login
 GET  /api/users/me
 GET  /api/users/me/accounts

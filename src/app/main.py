@@ -2,11 +2,12 @@ from __future__ import annotations
 
 from sanic import Sanic
 from sanic.exceptions import SanicException
-from sanic.response import json
+from sanic.response import html, json
 
 from app.config import settings
 from app.db import SessionLocal, engine
 from app.routes import api
+from app.ui import INDEX_HTML
 
 
 def create_app() -> Sanic:
@@ -38,6 +39,10 @@ def create_app() -> Sanic:
     @app.get("/health")
     async def health(_request):
         return json({"status": "ok"})
+
+    @app.get("/")
+    async def index(_request):
+        return html(INDEX_HTML)
 
     @app.before_server_stop
     async def close_engine(_app, _loop):
