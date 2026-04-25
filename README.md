@@ -10,6 +10,32 @@ PostgreSQL 16+
 Docker Compose
 ```
 
+## Используемые версии
+
+Runtime:
+
+```text
+Python: 3.12
+Docker image: python:3.12-slim
+PostgreSQL: 16-alpine
+Sanic: 24.6.0
+SQLAlchemy: 2.0.36
+asyncpg: 0.30.0
+Alembic: 1.14.0
+PyJWT: 2.10.1
+greenlet: 3.1.1
+```
+
+Tests:
+
+```text
+pytest: 8.3.4
+pytest-asyncio: 0.24.0
+aiosqlite: 0.20.0
+```
+
+Точные версии Python-зависимостей закреплены в `requirements.txt` и `requirements-dev.txt`.
+
 ## Запуск через Docker Compose
 
 ```bash
